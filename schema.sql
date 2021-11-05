@@ -202,3 +202,36 @@ ON (ce.emp_no = de.emp_no)
 INNER JOIN departments AS d
 ON (de.dept_no = d.dept_no);
 
+SELECT ce.emp_no,
+ce.first_name,
+ce.last_name,
+d.dept_name
+INTO sales_dept_info
+FROM current_emp as ce
+INNER JOIN dept_emp AS de
+ON (ce.emp_no = de.emp_no)
+INNER JOIN departments AS d
+ON (de.dept_no = d.dept_no)
+INNER JOIN employees AS e
+ON (e.emp_no = ce.emp_no)
+WHERE (e.birth_date BETWEEN '1952-01-01' AND '1955-12-31')
+     AND (e.hire_date BETWEEN '1985-01-01' AND '1988-12-31')
+     AND (de.to_date = '9999-01-01')
+	 AND (d.dept_no='d007');
+	 
+SELECT ce.emp_no,
+ce.first_name,
+ce.last_name,
+d.dept_name
+-- INTO sales_and_dev_dept_info
+FROM current_emp as ce
+INNER JOIN dept_emp AS de
+ON (ce.emp_no = de.emp_no)
+INNER JOIN departments AS d
+ON (de.dept_no = d.dept_no)
+INNER JOIN employees AS e
+ON (e.emp_no = ce.emp_no)
+WHERE (e.birth_date BETWEEN '1952-01-01' AND '1955-12-31')
+     AND (e.hire_date BETWEEN '1985-01-01' AND '1988-12-31')
+     AND (de.to_date = '9999-01-01')
+	 IN (d.dept_no='d007', d.dept_no='d005');
