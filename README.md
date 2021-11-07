@@ -40,6 +40,7 @@ Similar to our multiply-titled-workers issue from earlier, we needed to develop 
 
 ![Mentorship Eligibility](Resources/mentorship_eligibility.png)
 
+Here are the number of eligible employees for this program, broken up by the current departments in which they work.
 
 ![Eligible Titles](Resources/eligible_titles.png)
 
