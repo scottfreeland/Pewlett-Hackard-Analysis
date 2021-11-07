@@ -76,7 +76,7 @@ ORDER BY emp_no;
 SELECT emp_no, first_name, last_name, title
 From retirement_titles
 
--- Use Dictinct with Orderby to remove duplicate rows
+-- Using Distinct with Orderby to remove duplicate rows
 SELECT DISTINCT ON (emp_no) emp_no,
 first_name,
 last_name,
@@ -127,3 +127,8 @@ title
 INTO mentorship_eligibility
 FROM mentorship_eligibility_non_distinct_titles
 ORDER BY emp_no;
+
+SELECT COUNT(title) as count, title
+FROM mentorship_eligibility
+GROUP BY title
+ORDER BY count DESC;
