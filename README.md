@@ -34,7 +34,7 @@ Thus, we generated a list of all current PH employees who will soon be eligible 
 
 Thankfully, there is a plan to set up a program in place to help with retiring turnover and the loss of experienced workers from Pewlett-Hackard. The idea is that retiring employees will be able to shift their experience and learning onto the wave of workers right behind them - Those who will be filling in the retiring employees' senior roles. So, we sought to procure a table composed of workers eligible to enter this mentorship program, who will learn from the soon-to-retire employees.
 
-![Mentorship Eligibility (Non-Descript Titles)](Resources/mentorship_eligibility_non_descript_titles.png)
+![Mentorship Eligibility (Non-Descript Titles)](Resources/mentorship_eligibility_non_distinct_titles.png)
 
 Similar to our multiply-titled-workers issue from earlier, we needed to develop a data table which delivers the above data, but only delivers one row of information for each worker. Specifically, each row will display the current title for the employee eligible for this program. So, I employed the "SELECT DISTINCT ON" function again, grouping by title, and ordering by time to reveal the present title of each eligible employee. Finally, we have the data PH needs:
 
