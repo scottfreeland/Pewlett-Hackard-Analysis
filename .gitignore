@@ -127,5 +127,3 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-
-Queries/Employee_Challenge_starter_code.sql
